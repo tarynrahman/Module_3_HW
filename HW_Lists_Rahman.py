@@ -276,7 +276,7 @@ one_a_set = set(one_a)
 three_g = print(three_setC.union(three_setD, three_setE) == one_a_set)
 
 
-# In[24]:
+# In[3]:
 
 
 # The variable is 8, for which the type is integer
@@ -307,36 +307,50 @@ four_g = four_b.append(type(four_f_exp))
 print(four_b)
 
 
-# In[26]:
+# In[4]:
 
 
 #Problem 5
 print("Problem # 5")
-# The variable is 8, for which the type is integer
-four_a = 8
+# create a dictionary from four_g where key:value is index:corresponding object
+five_a = {
+    0 : "<class 'int'>" ,
+    1 : 0.39 ,
+    2 : "<class 'float'>" ,
+    3 : 12284 ,
+    4 : "<class 'int'>"
+}
+print(five_a)
 
-#Empty list
-four_b = []
-
-# Add the type int from four_a to the empty list in four_b
-four_c = four_b.append(type(four_a))
+# add 300 to the list from problem 4, coerced as a string
+five_b = four_b.append("300")
 print(four_b)
 
-# Add .39 to four_c - print(four_c) gives none type, however print(four_b) gives expected answer, as the .append() change occurs to four_b
-four_d = four_b.append(.39)
+# append the type of the object "300" to the list
+five_c = four_b.append(type("300"))
 print(four_b)
 
-# Append the type of the object .39 to this list
-four_e = four_b.append(type(.39))
+# slice the string "300" up to the second element
+five_d_str = "300"
+print(five_d_str[0:2])
+
+# append type from five_d in to list
+five_e = four_b.append(type(30))
 print(four_b)
 
-# Exponentiate .39 to -10 power and round to no decimal places
-four_f_exp = round(.39 ** (-10))
-four_f = four_b.append(four_f_exp)
+# Convert string 30 in to new list of integers
+five_f_list = '30'
+five_f_split = [x for x in five_f_list]
+five_f = [eval(x) for x in five_f_split]
+print(five_f)
+
+# append the type of five_f to the list
+five_g = four_b.append(type(five_f))
 print(four_b)
 
-# Append the type of the integer 12284 to the list appended in four_e
-four_g = four_b.append(type(four_f_exp))
+# append the type of three_setA to the list
+three_setA = {1,2,3,4,5}
+five_h = four_b.append(type(three_setA))
 print(four_b)
 
 
